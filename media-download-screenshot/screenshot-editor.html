@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>截图编辑</title>
+  <style>
+    body { margin: 0; padding: 10px; display: flex; flex-direction: column; height: 95vh; }
+    .toolbar { margin-bottom: 10px; padding: 8px; background: #f5f5f5; border-radius: 4px; }
+    .toolbar button { margin: 0 4px; padding: 6px 10px; cursor: pointer; border: 1px solid #ccc; border-radius: 4px; }
+    .toolbar button.active { background: #2196F3; color: white; border-color: #2196F3; }
+    #canvas-container { flex: 1; border: 1px solid #ccc; overflow: auto; }
+    #save-btn { margin-top: 10px; background: #4CAF50; color: white; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; }
+  </style>
+  <!-- 引入fabric.js（图片编辑核心库） -->
+  <!-- <script src="https://cdn.bootcdn.net/ajax/libs/fabric.js/5.3.0/fabric.min.js"></script> -->
+  <script src="fabric.min.js"></script>
+</head>
+<body>
+  <div class="toolbar">
+    <button id="pen-btn">画笔</button>
+    <button id="rect-btn">矩形</button>
+    <button id="text-btn">文字</button>
+    <button id="eraser-btn">橡皮擦</button>
+    <button id="clear-btn">清空标注</button>
+  </div>
+  <div id="canvas-container">
+    <canvas id="canvas"></canvas>
+  </div>
+  <button id="save-btn">保存图片</button>
+
+  <script src="screenshot-editor.js"></script>
+</body>
+</html>
